@@ -1,0 +1,173 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --very-dark-blue: hsl(243, 17%, 22%);
+  --light-cyan: hsl(172, 100%, 37%);
+  --gray: hsl(0, 0%, 76%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  min-height: 100vh;
+  padding: 7.1rem 2rem 2.3rem;
+  font-size: 1.6rem;
+  background-color: var(--very-dark-blue);
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+#app {
+  max-width: 110rem;
+  margin-inline: auto;
+}
+
+/* Header */
+#header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  margin-bottom: 10.1rem;
+}
+
+#header .logo svg path {
+  transition: fill 0.3s ease-out;
+}
+
+#header .logo:hover svg path:not(.logo svg path[fill='#2F2E41']) {
+  fill: var(--light-cyan);
+}
+
+#header .header-nav {
+  display: flex;
+  gap: 6.4rem;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--white);
+}
+
+#header .header-nav li a {
+  font-size: 1.4rem;
+  line-height: 2.8rem;
+  font-weight: 500;
+  color: inherit;
+  transition: color 0.3s ease-out;
+}
+
+#header .header-nav li a:hover {
+  color: var(--light-cyan);
+}
+
+/* Main Content */
+#main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  margin-bottom: 15.7rem;
+}
+
+#main .main-info-image {
+  flex: 1 1 26rem;
+}
+
+#main .main-info-content {
+  flex: 2 1 26rem;
+  text-align: center;
+}
+
+#main .main-info-content h1 {
+  margin-bottom: 5.9rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 3.6rem;
+  line-height: 4rem;
+  color: var(--white);
+}
+
+#main .main-info-content h1 span {
+  color: var(--light-cyan);
+}
+
+#main .main-info-content p {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 2.8rem;
+  color: var(--gray);
+}
+
+#main .main-info-content p:nth-child(2) {
+  max-width: 60ch;
+  margin: 0 auto 4rem;
+}
+
+#main .main-info-content p:nth-of-type(2) strong:nth-child(2) {
+  color: var(--light-cyan);
+}
+
+/* Footer */
+#footer {
+  max-width: 56.8rem;
+  margin-inline: auto;
+  padding-top: 2.7rem;
+  text-align: center;
+  border-top: 0.1rem solid var(--light-cyan);
+}
+
+#footer p {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.4rem;
+  line-height: 2.8rem;
+  color: var(--white);
+}
+
+#footer p a {
+  color: inherit;
+  transition: color 0.3s ease-out;
+}
+
+#footer p a:hover {
+  color: var(--light-cyan);
+}
+
+/* Padlock Decoration */
+.padlock {
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+  z-index: -1;
+}
+
+/* Responsive */
+@media only screen and (max-width: 678px) {
+  #header {
+    flex-direction: column;
+  }
+
+  #header .header-nav {
+    gap: 3.2rem;
+  }
+
+  #main {
+    margin-bottom: 7.85rem;
+  }
+
+  #main .main-info-image img {
+    margin-inline: auto;
+  }
+}
